@@ -1,7 +1,7 @@
 import java.util.Vector;
 
 public class Set {
-	Vector<String> mySet = new Vector<String>();
+	private Vector<String> mySet = new Vector<String>();
 	
 	public Set(String[] data) {
 		for (String s : data) {
@@ -11,6 +11,10 @@ public class Set {
 	
 	public Set() {
 		//leave empty
+	}
+	
+	public boolean contains(String element) {
+		return this.mySet.contains(element);
 	}
 	
 	public String getElement(int index) {
@@ -33,8 +37,23 @@ public class Set {
 		return newSet;
 	}
 	
+	public Set removeDups() {
+		Set newSet = new Set();
+		String currentElement = "";
+		for (int i = 0; i < this.getCount(); i++) {
+			currentElement = this.getElement(i);
+			if (!newSet.contains(currentElement)) {
+				newSet.addElement(currentElement);
+			} else {
+				//do nothing
+			}
+		}
+		return newSet;
+	}
+	
 	public Set setIntersection(Set otherSet) {
 		Set newSet = new Set();
+		Set mySetNoDups = this.removeDups(); 
 		
 	}
 }
