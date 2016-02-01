@@ -74,5 +74,7 @@ public class TestRunner {
 		} else {
 			System.out.println("Test case 3 failed.");
 		}
+		
+		System.out.println("testToString complete.");
 	}
 }
