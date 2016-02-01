@@ -1,6 +1,12 @@
-/*
- * 
- */
+/* Student Information
+* -------------------
+*    Student Name: Timpau Victor
+*    Student Number: 001414243
+*    Course Code: CS/SE 2XB3
+*    Lab Section: Lab 01
+*  
+*    I attest that the following code being submitted is my own individual work.
+*/
 
 import java.io.IOException;
 import java.nio.file.Files;
