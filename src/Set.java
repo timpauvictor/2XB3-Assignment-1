@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Vector;
 
 public class Set {
@@ -49,11 +50,16 @@ public class Set {
 	}
 	
 	public String toString() {
+		//edge cases
+		if (this.getCount() == 0) {
+			return "{}";
+		}
+		//regular cases
 		String setAsString = "{";
-		for (int i = 0; i < this.getCount(); i++ ) {
+		for (int i = 0; i < this.getCount() - 1; i++ ) {
 			setAsString += this.getElement(i) + ",";
 		}
-		setAsString += "}";
+		setAsString += this.getElement(this.getCount() - 1) +  "}";
 		return setAsString;
 	}
 	
