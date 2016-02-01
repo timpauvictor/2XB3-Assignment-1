@@ -90,11 +90,11 @@ public class Set {
 		Set newSet = new Set();
 		Set mySetNoDupes = this.removeDupes();
 		Set otherSetNoDupes = otherSet.removeDupes();
+		for (int i = 0; i < mySetNoDupes.getCount(); i++) {
+			newSet.addElement(mySetNoDupes.getElement(i)); 
+		}
 		for (int i = 0; i < otherSetNoDupes.getCount(); i++) { //iterate through set
 			newSet.addElement(otherSetNoDupes.getElement(i)); // add element
-		}
-		for (int i = 0; i < mySetNoDupes.getCount(); i++) {
-			newSet.addElement(otherSetNoDupes.getElement(i)); 
 		}
 		return newSet; //return new set
 	}
